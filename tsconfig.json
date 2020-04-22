@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es3",
+    "target": "es5",
+    "declaration": true,
+    "declarationDir": "dist",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "declaration": true,
     "sourceMap": true,
+    "baseUrl": "src",
     "lib": [
       "esnext"
     ]
   },
+  "include": [
+    "./src"
+  ],
   "exclude": [
     "node_modules"
   ]

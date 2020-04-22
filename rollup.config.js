@@ -1,12 +1,23 @@
-import typescript from 'rollup-plugin-typescript2'
-import { uglify } from 'rollup-plugin-uglify'
+import typescript from "rollup-plugin-typescript2";
+import { uglify } from "rollup-plugin-uglify";
 
-export default {
-  entry: 'src/index.ts',
-  dest: 'dist/index.min.js',
-  format: 'cjs',
+const base = {
   plugins: [
     typescript(),
     uglify()
   ]
 }
+
+export default [
+  Object.assign(
+    {},
+    base,
+    {
+      input: "src/wrapper.ts",
+      output: {
+        format: 'cjs',
+        file: "dist/index.js"
+      }
+    }
+  )
+];

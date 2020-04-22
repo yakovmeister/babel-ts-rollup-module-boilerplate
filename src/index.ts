@@ -1,17 +1,7 @@
-/**
- * your app starts here.
- */
-const Hello = 'world'
-
-function x(aw: string) {
-  return aw + y()
+function sayHello(): string {
+  return "Hello";
 }
 
-
-function y() {
-  const arr = [1, 2, 3]
-
-  return [].concat(...arr)
-}
-
-export default x
+export {
+  sayHello
+};
